@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Card({id, image, info, price, name, removeAnime}){
+function Card({id, image, info, genre, length,status, name, removeAnime}){
     const[readmore, setReadmore]= useState(false); 
     const description  = readmore? info: `${info.substring(0,200)}....`
 
@@ -12,15 +12,19 @@ function Card({id, image, info, price, name, removeAnime}){
     return(
         <div className="card">
             <img src={image} className="image"></img>
+            <div className="genre"> {genre} </div>
             <div className="anime-info">
                 <div className="anime-details">
-                <h4 className="anime-length"> {price} </h4>
+                <div className="series">
+                <h4 className="anime-season"> {length} </h4>
+                <span style={{color: status == "Completed" ? "green" : "red"}} className="status"> {status} </span>
+                </div>
                 <h4 className="anime-name">{name}</h4>
             </div>
 
             <div className="description">
                 {description}
-                <span className="read-more" onClick={readmoreHandler}> {readmore? `show less` : `read more`}</span>
+                <span className="read-more" onClick={readmoreHandler}> {readmore? `Show Less` : `Read More`}</span>
             </div>
 
             </div>
