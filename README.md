@@ -2,7 +2,7 @@ I’ve built an Anime Recommendation Website using React.js, where I share and r
 It’s a fun project showcasing my love for anime and my skills in front-end web development.
 
 👉 Check it out here: Live Demo :
-https://harshikajain23.github.io/Anime_recommendation_react/
+https://harshikajain23.github.io/Anime_recommendation_react/index.html
 
 <br>
 <br>
