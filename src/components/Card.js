@@ -11,13 +11,13 @@ function Card({id, image, info, genre, length,status, name, removeAnime}){
    
     return(
         <div className="card">
-            <img src={image} loading="lazy" className="image"></img>
+            <img src={image} loading="lazy" className="image" alt={image}></img>
             <div className="genre"> {genre} </div>
             <div className="anime-info">
                 <div className="anime-details">
                 <div className="series">
                 <h4 className="anime-season"> {length} </h4>
-                <span style={{color: status == "Completed" ? "green" : "red"}} className="status"> {status} </span>
+                <span style={{color: status === "Completed" ? "green" : "red"}} className="status"> {status} </span>
                 </div>
                 <h4 className="anime-name">{name}</h4>
             </div>
