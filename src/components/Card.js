@@ -11,7 +11,7 @@ function Card({id, image, info, genre, length,status, name, removeAnime}){
    
     return(
         <div className="card">
-            <img src={image} className="image"></img>
+            <img src={image} loading="lazy" className="image"></img>
             <div className="genre"> {genre} </div>
             <div className="anime-info">
                 <div className="anime-details">
